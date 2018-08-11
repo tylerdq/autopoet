@@ -1,0 +1,83 @@
+import random
+
+f = open('2of12id.txt','rt')
+
+a = []  # Empty variable for adjectives
+c = []  # Empty variable for conjunctions/prepositions
+i = []  # Empty variable for interjections
+n = []  # Empty variable for nouns
+p = []  # Empty variable for pronouns
+s = []  # Empty variable for spoken contractions
+v = []  # Empty variable for verbs
+x = []  # Empty variable for miscellaneous lines
+vars = [a,c,i,n,p,s,v,x]  # List of all part-of-speech variables
+
+for line in f:
+    if 'A:' in line:
+        a.append(line)
+    elif 'C:' in line:
+        c.append(line)
+    elif 'I:' in line:
+        i.append(line)
+    elif 'N:' in line:
+        n.append(line)
+    elif 'P:' in line:
+        p.append(line)
+    elif 'S:' in line:
+        s.append(line)
+    elif 'V:' in line:
+        v.append(line)
+    else:
+        x.append(line)
+
+usrInput = input('Please choose between "preset" or "random" format: ')
+if 'exit' in usrInput:
+    f.close()
+    exit()
+else:
+    while (usrInput != 'preset') and (usrInput != 'random'):
+        usrInput = input('Sorry, please try again: ')
+
+if usrInput == 'preset':
+    usrInput = input('Please enter desired format: ')
+    for letters in usrInput:
+        if 'a' in letters:
+            print(random.choice(a))
+        elif 'c' in letters:
+            print(random.choice(c))
+        elif 'i' in letters:
+            print(random.choice(i))
+        elif 'n' in letters:
+            print(random.choice(n))
+        elif 'p' in letters:
+            print(random.choice(p))
+        elif 's' in letters:
+            print(random.choice(s))
+        elif 'v' in letters:
+            print(random.choice(v))
+        elif 'x' in letters:
+            print(random.choice(x))
+        elif '_' in letters:
+            print(random.choice(random.choice(vars)))
+        elif 'exit' in usrInput:
+            f.close()
+            exit()
+        else:
+            print('INVALID CHARACTER')
+    # I want to set this section up so it returns the user to the previous prompt after printing their poem (like the "random" option does)
+
+elif usrInput == 'random':
+    while True:
+        try:
+            usrInput = input('Please enter a numerical format length: ')
+            if 'exit' in usrInput:
+                f.close()
+                exit()
+            else:
+                usrInput = int(usrInput)
+        except ValueError:
+                print('Please enter the value as an integer.')
+                continue
+        else:
+            for number in range(usrInput):
+                print(random.choice(random.choice(vars)))
