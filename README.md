@@ -17,3 +17,4 @@ A sample format might be `A V N`, which results in the output `Adjective Verb No
 ## Some fun outputs from the scritp (with their formats)
 * Extracurricular Converging Potholes (`A V N`)
 * Grazing my Java (`V my N`)
+* Swarding my Placekickers (`V my N`)

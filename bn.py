@@ -1,15 +1,14 @@
 import random
 
 f = open('2of12id.txt','rt')
-#words = f.read()
-a = []  # Create empty variable for adjectives
-c = []  # Create empty variable for conjunctions/prepositions
-i = []  # Create empty variable for interjections
-n = []  # Create empty variable for nouns
-p = []  # Create empty variable for pronouns
-s = []  # Create empty variable for spoken contractions
-v = []  # Create empty variable for verbs
-x = []  # Create empty variable for miscellaneous lines
+a = []  # Empty variable for adjectives
+c = []  # Empty variable for conjunctions/prepositions
+i = []  # Empty variable for interjections
+n = []  # Empty variable for nouns
+p = []  # Empty variable for pronouns
+s = []  # Empty variable for spoken contractions
+v = []  # Empty variable for verbs
+x = []  # Empty variable for miscellaneous lines
 for line in f:
     if 'A:' in line:
         a.append(line)
@@ -27,5 +26,5 @@ for line in f:
         v.append(line)
     else:
         x.append(line)
-print(random.choice(v),'my',random.choice(n))
+print(random.choice(v),'my\n',random.choice(n))
 f.close()
