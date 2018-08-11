@@ -1,20 +1,4 @@
-#import click
 import random
-
-#with open('2of12id.txt') as f:
-#    for line in f:
-#        if 'A:' in line:  # Limit to adjective lines
-#            randAdj =
-#            print(line)
-#        else:
-#            randLine =
-
-# Limit to adjectives only
-#line = random.choice(open('2of12id.txt').readlines())
-
-#if 'A:' in line:
-#    print(line)
-#else:
 
 f = open('2of12id.txt','rt')
 #words = f.read()
