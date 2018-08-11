@@ -12,7 +12,7 @@ At any point, the user can type "exit" to leave the program.
 
 ## Input Format
 When the "preset" option is chosen, the script needs to be given a format by feeding it arrangements of parts of speech. The output will print a random part of speech in the order requested. Possible parts of speech include:
-* Adjectives - `a`
+* Adjectives/adverbs - `a`
 * Conjunctions/prepositions - `c`
 * Interjections - `i`
 * Nouns - `n`
