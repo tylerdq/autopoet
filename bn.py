@@ -1,6 +1,7 @@
 import random
 
 f = open('2of12id.txt','rt')
+
 a = []  # Empty variable for adjectives
 c = []  # Empty variable for conjunctions/prepositions
 i = []  # Empty variable for interjections
@@ -9,6 +10,8 @@ p = []  # Empty variable for pronouns
 s = []  # Empty variable for spoken contractions
 v = []  # Empty variable for verbs
 x = []  # Empty variable for miscellaneous lines
+vars = [a,c,i,n,p,s,v,x]
+
 for line in f:
     if 'A:' in line:
         a.append(line)
@@ -26,5 +29,14 @@ for line in f:
         v.append(line)
     else:
         x.append(line)
-print(random.choice(v),'my\n',random.choice(n))
+
+usr_input = input("Input: ")
+while (usr_input != '1') and (usr_input != '2'):
+    usr_input = input("Input: ")
+
+if usr_input == '1':
+    print(random.choice(n))
+elif usr_input == '2':
+    print(random.choice(random.choice(vars)),random.choice(random.choice(vars)),random.choice(random.choice(vars)))
+
 f.close()
