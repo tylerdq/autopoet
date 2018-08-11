@@ -30,13 +30,18 @@ for line in f:
     else:
         x.append(line)
 
-usr_input = input("Input: ")
-while (usr_input != '1') and (usr_input != '2'):
-    usr_input = input("Input: ")
+usr_input = input('Choose "preset" or "random" format: ')
+while (usr_input != 'preset') and (usr_input != 'random'):
+    usr_input = input('Sorry, please try again: ')
 
-if usr_input == '1':
-    print(random.choice(n))
-elif usr_input == '2':
+if usr_input == 'preset':
+    usr_input = input('Enter format: ')
+    if usr_input == 'avn':
+            print(random.choice(a),random.choice(v),random.choice(n))
+    elif usr_input == 'vn':
+            print(random.choice(v),random.choice(n))
+
+elif usr_input == 'random':
     print(random.choice(random.choice(vars)),random.choice(random.choice(vars)),random.choice(random.choice(vars)))
 
 f.close()
