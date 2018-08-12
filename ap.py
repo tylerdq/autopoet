@@ -39,32 +39,36 @@ else:
         usrInput = input('Sorry, please try again: ')
 
 if usrInput == 'preset':
-    usrInput = input('Please enter desired format: ')
-    for letters in usrInput:
-        if 'a' in letters:
-            print(random.choice(a))
-        elif 'c' in letters:
-            print(random.choice(c))
-        elif 'i' in letters:
-            print(random.choice(i))
-        elif 'n' in letters:
-            print(random.choice(n))
-        elif 'p' in letters:
-            print(random.choice(p))
-        elif 's' in letters:
-            print(random.choice(s))
-        elif 'v' in letters:
-            print(random.choice(v))
-        elif 'x' in letters:
-            print(random.choice(x))
-        elif '_' in letters:
-            print(random.choice(random.choice(vars)))
-        elif 'exit' in usrInput:
+    while True:
+        usrInput = input('Please enter desired format: ')
+        if 'exit' in usrInput:
             f.close()
             exit()
         else:
-            print('INVALID CHARACTER')
-    # I want to set this section up so it returns the user to the previous prompt after printing their poem (like the "random" option does)
+            for letters in usrInput:
+                if 'a' in letters:
+                    print(random.choice(a))
+                elif 'c' in letters:
+                    print(random.choice(c))
+                elif 'i' in letters:
+                    print(random.choice(i))
+                elif 'n' in letters:
+                    print(random.choice(n))
+                elif 'p' in letters:
+                    print(random.choice(p))
+                elif 's' in letters:
+                    print(random.choice(s))
+                elif 'v' in letters:
+                    print(random.choice(v))
+                elif 'x' in letters:
+                    print(random.choice(x))
+                elif '_' in letters:
+                    print(random.choice(random.choice(vars)))
+                elif 'exit' in usrInput:
+                    f.close()
+                    exit()
+                else:
+                    print('INVALID CHARACTER')
 
 elif usrInput == 'random':
     while True:

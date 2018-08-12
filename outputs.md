@@ -9,3 +9,5 @@
 * behind recoverable deafening fly fair playbills - `canvvan`
 * nightmarish scapegoat twas wherever overburdens - `avscn`
 * observably orchestrate blindfolded sands - `avvn`
+* unholy mash nanny - `avn`
+* agrarian coalescing breastbone - `avn`
