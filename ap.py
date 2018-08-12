@@ -1,6 +1,6 @@
-import random
+import random  # Enable random functions through relevant python library
 
-f = open('2of12id.txt','rt')
+f = open('2of12id.txt','rt')  # Open dictionary text file for reading
 
 a = []  # Empty variable for adjectives
 c = []  # Empty variable for conjunctions/prepositions
@@ -12,7 +12,7 @@ v = []  # Empty variable for verbs
 x = []  # Empty variable for miscellaneous lines
 vars = [a,c,i,n,p,s,v,x]  # List of all part-of-speech variables
 
-for line in f:
+for line in f:  # Loop through each line of the dict, adding lines to relevant variables according to their listed part of speech
     if 'A:' in line:
         a.append(line)
     elif 'C:' in line:
@@ -28,7 +28,7 @@ for line in f:
     elif 'V:' in line:
         v.append(line)
     else:
-        x.append(line)
+        x.append(line)  # Any lines that don't have a part of speech assigned
 
 usrInput = input('Please choose between "preset" or "random" format: ')
 if 'exit' in usrInput:
@@ -36,7 +36,11 @@ if 'exit' in usrInput:
     exit()
 else:
     while (usrInput != 'preset') and (usrInput != 'random'):
-        usrInput = input('Sorry, please try again: ')
+        if 'exit' in usrInput:
+            f.close()
+            exit()
+        else:
+            usrInput = input('Sorry, please try again: ')
 
 if usrInput == 'preset':
     while True:
