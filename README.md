@@ -4,7 +4,9 @@ autopoet is a little interactive script that draws on the alternative dictionary
 ## Usage
 Install [Python 3](https://www.python.org/downloads/). Download or clone the repository, then open a terminal, `cd` into the directory, and run:
 
-`python3 ap.py form <option>` or `python3 ap.py rand <option>`, where `<option>` is either an alphanumeric input format (if entered with "form") or an integer (if entered with "rand"). Run `python3 ap.py help` for basic instructions. The basic difference between "form" and "rand" is that with "form", you tell the script which parts of speech you would like it to use in which order (see next section), while with "rand", you merely tell the script how many parts of speech to generate, and it assigns the requested number of random parts of speech.
+`python3 ap.py form <option>` or `python3 ap.py rand <option>`, where `<option>` is either an alphanumeric input format (if entered with "form") or an integer (if entered with "rand"). Run `python3 ap.py help` for basic instructions.
+
+The basic difference between "form" and "rand" is that with "form", you tell the script which parts of speech you would like it to use in which order (see next section), while with "rand", you merely tell the script how many parts of speech to generate, and it assigns the requested number of random parts of speech.
 
 *There is also a verbose (guided) version of the script you can use by running `python3 apv.py`. Check its [readme](/READMEv.md) for more information.*
 
