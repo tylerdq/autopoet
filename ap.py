@@ -1,91 +1,76 @@
-import random  # Enable random functions through relevant python library
+import random  # Enable random functions from python library
 
-f = open('2of12id.txt','rt')  # Open dictionary text file for reading
 
-a,c,i,n,p,s,v,m = [],[],[],[],[],[],[],[]  # Empty lists for parts of speech
-d1 = {'A:':a, 'C:':c, 'I:':i, 'N:':n, 'P:':p, 'S:':s, 'V:':v}
-posList = [a,c,i,n,p,s,v]  # List of all part-of-speech variables
-
-for line in f:  # Loop dictionary file lines, adding lines to pos variables
-    for x, y in d1.items():
-        if x in line:
-            y.append(line)
-        else:
-            m.append(line)  # Lines that don't have a part of speech assigned
-
-# Initial input prompt
-usrInput = input('Please choose between "preset", "random", or "thes": ')
-if 'exit' in usrInput:
+def exiting():
     f.close()
     exit()
-else:
-    while (usrInput != 'preset') and (usrInput != 'random') and (usrInput != 'thes'):
-        if 'exit' in usrInput:
-            f.close()
-            exit()
-        else:
-            usrInput = input('Sorry, please try again: ')
 
-# Actions to take if "preset" is entered in initial input
-if usrInput == 'preset':
-    while True:
-        usrInput = input('Please enter desired format: ')
-        if 'exit' in usrInput:
-            f.close()
-            exit()
+
+f = open('2of12id(rev).txt', 'rt')  # Open dictionary text file for reading
+
+a,c,i,n,p,s,v = [],[],[],[],[],[],[]  # Empty lists for parts of speech
+posList = [a,c,i,n,p,s,v]  # Meta-list of all part-of-speech lists
+textLabels = ['A:', 'C:', 'I:', 'N:', 'P:', 'S:', 'V:']
+varLabels = ['a', 'c', 'i', 'n', 'p', 's', 'v']
+d1 = dict(zip(textLabels,posList))
+d2 = dict(zip(varLabels,posList))
+
+for line in f:  # Loop through dictionary file, adding lines to pos lists
+    # if any(x1 in line for x1 in d1.keys()):
+    for x1, y1 in d1.items():
+        if x1 in line:
+            y1.append(line)
+
+i = input('Please choose between "form", "rand", or "thes": ')
+if 'exit' in i:
+    exiting()
+else:
+    while (i != 'form') and (i != 'rand') and (i != 'thes'):
+        if 'exit' in i:
+            exiting()
         else:
-            for letters in usrInput:
-                if 'a' in letters:
-                    print(random.choice(a))
-                elif 'c' in letters:
-                    print(random.choice(c))
-                elif 'i' in letters:
-                    print(random.choice(i))
-                elif 'n' in letters:
-                    print(random.choice(n))
-                elif 'p' in letters:
-                    print(random.choice(p))
-                elif 's' in letters:
-                    print(random.choice(s))
-                elif 'v' in letters:
-                    print(random.choice(v))
-                elif 'm' in letters:
-                    print(random.choice(m))
-                elif '_' in letters:
+            i = input('Sorry, please try again: ')
+
+if i == 'form':  # Code block for "form" subprogram
+    while True:
+        i = input('Please enter desired format: ')
+        if 'exit' in i:
+            exiting()
+        else:
+            for letters in i:
+                if 'exit' in i:
+                    exiting()
+                elif any(z in letters for z in d2.keys()):
+                    for x2, y2 in d2.items():
+                        if x2 in letters:
+                            print(random.choice(y2))
+                elif 'x' in letters:
                     print(random.choice(random.choice(posList)))
-                elif 'exit' in usrInput:
-                    f.close()
-                    exit()
                 else:
                     print('INVALID CHARACTER')
 
-# Actions to take if "random" is entered in initial input
-elif usrInput == 'random':
+elif i == 'rand':  # Code block for "rand" subprogram
     while True:
         try:
-            usrInput = input('Please enter a numerical format length: ')
-            if 'exit' in usrInput:
-                f.close()
-                exit()
+            i = input('Please enter a numerical format length: ')
+            if 'exit' in i:
+                exiting()
             else:
-                usrInput = int(usrInput)
+                i = int(i)
         except ValueError:
                 print('Please enter the value as an integer.')
                 continue
         else:
-            for number in range(usrInput):
+            for number in range(i):
                 print(random.choice(random.choice(posList)))
 
-# Actions to take if "thes" is entered in intial input.
-elif usrInput == 'thes':
-    usrInput1 = input('Please enter a part of speech code: ')
-    if 'exit' in usrInput1:
-        f.close()
-        exit()
+elif i == 'thes':  # Code block for "thes" subprogram
+    i1 = input('Please enter a part of speech code: ')
+    if 'exit' in i1:
+        exiting()
     else:
-        while (usrInput1 != ('a' or 'c' or 'i' or 'n' or 'p' or 's' or 'v' or 'x')):
-            if 'exit' in usrInput1:
-                f.close()
-                exit()
+        while (i1 != any(varLabels)):
+            if 'exit' in i1:
+                exiting()
             else:
-                usrInput = input('Sorry, please try again: ')
+                i = input('Sorry, please try again: ')
