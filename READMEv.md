@@ -4,7 +4,7 @@ autopoet is a little interactive script that draws on the alternative dictionary
 ## Usage
 Install [Python 3](https://www.python.org/downloads/). Download or clone the repository, then open a terminal, `cd` into the directory, and run:
 
-`python3 ap.py`
+`python3 apv.py`
 
 Upon execution, the script will invite the user to choose between using a preset format or a random list. Enter `form` to specify which parts of speech the program should generate. Enter `rand` to specify a poem length and let the script randomly assign a number of parts of speech equal to the specified length. Input and output formats are explained in more detail in the next two sections.
 
