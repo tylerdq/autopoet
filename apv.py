@@ -20,11 +20,11 @@ for line in f:  # Loop through dictionary file, adding lines to pos lists
         if x1 in line:
             y1.append(line)
 
-i = input('Please choose between "form", "rand", or "thes": ')
+i = input('Please choose between "form" or "rand": ')
 if 'exit' in i:
     exiting()
 else:
-    while (i != 'form') and (i != 'rand') and (i != 'thes'):
+    while (i != 'form') and (i != 'rand'):
         if 'exit' in i:
             exiting()
         else:
@@ -62,3 +62,5 @@ elif i == 'rand':  # Code block for "rand" subprogram
         else:
             for number in range(i):
                 print(random.choice(random.choice(posList)))
+
+exiting()

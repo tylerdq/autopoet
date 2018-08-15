@@ -4,12 +4,16 @@ autopoet is a little interactive script that draws on the alternative dictionary
 ## Usage
 Install [Python 3](https://www.python.org/downloads/). Download or clone the repository, then open a terminal, `cd` into the directory, and run:
 
-`python3 ap.py form <option>` or `python3 ap.py rand <option>`, where `<option>` is either an alphanumeric input format (if entered with "form") or an integer (if entered with "rand"). Run `python3 ap.py help` for basic instructions. The basic difference between "form" and "rand" is that with "form", you tell the script which parts of speech you would like it to use in which order (see next section), while with "rand", you merely tell the script how many parts of speech to generate, and it assigns the requested number of random parts of speech.
+`python3 ap.py`
 
-*There is also a verbose (guided) version of the script you can use by running `python3 apv.py`. Check its [readme](/READMEv.md) for more information.*
+Upon execution, the script will invite the user to choose between using a preset format or a random list. Enter `form` to specify which parts of speech the program should generate. Enter `rand` to specify a poem length and let the script randomly assign a number of parts of speech equal to the specified length. Input and output formats are explained in more detail in the next two sections.
+
+At any point, the user can type "exit" to leave the program.
+
+*There is also a non-verbose (single-line command) version of the script you can use by running `python3 ap.py`. Check its [readme](/README.md) for more information.*
 
 ## Input Format
-When the "form" option is chosen, the script needs to be given a format by feeding it arrangements of parts of speech. The output will print random words speech equal to the number of letters entered. Possible parts of speech include:
+When the "preset" option is chosen, the script needs to be given a format by feeding it arrangements of parts of speech. The output will print a random part of speech in the order requested. Possible parts of speech include:
 
 * Adjectives/adverbs - `a`
 * Conjunctions/prepositions - `c`
