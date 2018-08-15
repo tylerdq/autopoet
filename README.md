@@ -8,7 +8,7 @@ Install [Python 3](https://www.python.org/downloads/). Download or clone the rep
 
 The basic difference between "form" and "rand" is that with "form", you tell the script which parts of speech you would like it to use in which order (see next section), while with "rand", you merely tell the script how many parts of speech to generate, and it assigns the requested number of random parts of speech.
 
-*There is also a verbose (guided) version of the script you can use by running `python3 apv.py`. Check its [readme](/READMEv.md) for more information.*
+*There is also a verbose (guided) version of the script you can use by running `python3 files/apv.py`. Check its [readme](files/READMEv.md) for more information.*
 
 ## Input Format
 When the "form" option is chosen, the script needs to be given a format by feeding it arrangements of parts of speech. The output will print random words speech equal to the number of letters entered. Possible parts of speech include:

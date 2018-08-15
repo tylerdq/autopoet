@@ -6,7 +6,7 @@ def exiting():
     exit()
 
 
-f = open('2of12id(rev).txt', 'rt')  # Open dictionary text file for reading
+f = open('files/2of12id(rev).txt', 'rt')  # Open dictionary text file for reading
 
 a,c,i,n,p,s,v = [],[],[],[],[],[],[]  # Empty lists for parts of speech
 posList = [a,c,i,n,p,s,v]  # Meta-list of all part-of-speech lists

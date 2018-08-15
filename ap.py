@@ -1,7 +1,7 @@
 import sys  # Enable passing command line arguments to script
 import random  # Enable random functions from python library
 
-f = open('2of12id(rev).txt', 'rt')  # Open dictionary text file for reading
+f = open('files/2of12id(rev).txt', 'rt')  # Open dictionary text file for reading
 
 if sys.argv[1] == 'help':
     print('autopoet usage:\n"python ap.py <subprogram> <option>"\nSubprograms include "form" and "rand"\nOptions include letters for "form" and integers for "rand"')
