@@ -1,6 +1,5 @@
-## Some example outputs from the script (with their formats)
+## Example script outputs (with their formats)
 * extracurricular converging potholes - `avn`
-* graze java - `vn`
 * swarding placekickers - `vn`
 * earthen among others - `acp`
 * limbless treasures - `an`
@@ -17,7 +16,6 @@
 * few lachrymal shlepss replenish subtitled rigs - `panvan`
 * our archaeological dose festoons offhanded guffaws - `panvan`
 * she remodeled valor during lapwing lollygagging - `pvncnv`
-* ticks somebody cabbed gonna yow legends fore - `npvsini`
 * gimme superfluity - `sn`
 * achoo scaremonger - `in`
 * cape stumble - `nn`
@@ -25,3 +23,9 @@
 * me gotta upscale - `psv`
 * misplay despite your wolfish roaring - `vcpan`
 * glamorize how thy inspiration prints - `vcpan`
+* chomp upside one's swift mantra - `vcpan`
+* arrange like his meager omission - `vcpan`
+* check out these equidistant mastications - `vcpan`
+* tithe unlike whichever dovish protozoan - `vcpan`
+* homogenize into your numinous wizardry - `vcpan`
+* fall among anybody's preistly associates - `vcpan`
