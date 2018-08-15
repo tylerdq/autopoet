@@ -29,7 +29,7 @@ A sample input format might be `avnx`, which results in an output such as "adjec
 ## Output Format
 The script returns verbatim lines from the 2of12id dictionary, most of which contain multiple versions of each word (suffixes, including tenses and pluralization). The choice to return full lines instead of parsing through the lines was made to encourage the user to take additional creative steps post-script by choosing which versions of words work best for the usage at hand.
 
-*Example script outputs can be viewed in [outputs.md](/outputs.md)*
+*Example script outputs can be viewed in [outputs.md](files/outputs.md)*
 
 ## Notes on Dictionary File
 The 2of12id dictionary was first edited using the following processes to make it simpler to parse in python:
