@@ -19,7 +19,7 @@ When the "preset" option is chosen, the script needs to be given a format by fee
 * Pronouns - `p`
 * Spoken contractions - `s`
 * Verbs - `v`
-* Miscellaneous items - `x`
+* Miscellaneous items - `m`
 * Any of the above - `_`
 
 A sample input format might be `avn_`, which results in an output such as "adjective verb noun" plus one random part of speech.

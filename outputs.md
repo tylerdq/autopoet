@@ -11,3 +11,14 @@
 * observably orchestrate blindfolded sands - `avvn`
 * unholy mash nanny - `avn`
 * agrarian coalescing breastbone - `avn`
+* whomever fosters sedimented futilities - `pavn'
+* this nutty pony stunning - `pavn`
+* everyone seductive coerces mischief - `pavn`
+* few lachrymal shlepss replenish subtitled rigs - `panvan`
+* our archaeological dose festoons offhanded guffaws - `panvan`
+* she remodeled valor during lapwing lollygagging - `pvncnv`
+* ticks somebody cabbed gonna yow legends fore - `npvsini`
+* gimme superfluity - `sn`
+* achoo scaremonger - `in`
+* cape stumble - `nn`
+* telecaster impasse - `nn`

@@ -2,46 +2,31 @@ import random  # Enable random functions through relevant python library
 
 f = open('2of12id.txt','rt')  # Open dictionary text file for reading
 
-a = []  # Empty variable for adjectives
-c = []  # Empty variable for conjunctions/prepositions
-i = []  # Empty variable for interjections
-n = []  # Empty variable for nouns
-p = []  # Empty variable for pronouns
-s = []  # Empty variable for spoken contractions
-v = []  # Empty variable for verbs
-x = []  # Empty variable for miscellaneous lines
-vars = [a,c,i,n,p,s,v,x]  # List of all part-of-speech variables
+a,c,i,n,p,s,v,m = [],[],[],[],[],[],[],[]  # Empty lists for parts of speech
+d1 = {'A:':a, 'C:':c, 'I:':i, 'N:':n, 'P:':p, 'S:':s, 'V:':v}
+posList = [a,c,i,n,p,s,v]  # List of all part-of-speech variables
 
-for line in f:  # Loop through each line of the dict, adding lines to relevant variables according to their listed part of speech
-    if 'A:' in line:
-        a.append(line)
-    elif 'C:' in line:
-        c.append(line)
-    elif 'I:' in line:
-        i.append(line)
-    elif 'N:' in line:
-        n.append(line)
-    elif 'P:' in line:
-        p.append(line)
-    elif 'S:' in line:
-        s.append(line)
-    elif 'V:' in line:
-        v.append(line)
-    else:
-        x.append(line)  # Any lines that don't have a part of speech assigned
+for line in f:  # Loop dictionary file lines, adding lines to pos variables
+    for x, y in d1.items():
+        if x in line:
+            y.append(line)
+        else:
+            m.append(line)  # Lines that don't have a part of speech assigned
 
-usrInput = input('Please choose between "preset" or "random" format: ')
+# Initial input prompt
+usrInput = input('Please choose between "preset", "random", or "thes": ')
 if 'exit' in usrInput:
     f.close()
     exit()
 else:
-    while (usrInput != 'preset') and (usrInput != 'random'):
+    while (usrInput != 'preset') and (usrInput != 'random') and (usrInput != 'thes'):
         if 'exit' in usrInput:
             f.close()
             exit()
         else:
             usrInput = input('Sorry, please try again: ')
 
+# Actions to take if "preset" is entered in initial input
 if usrInput == 'preset':
     while True:
         usrInput = input('Please enter desired format: ')
@@ -64,16 +49,17 @@ if usrInput == 'preset':
                     print(random.choice(s))
                 elif 'v' in letters:
                     print(random.choice(v))
-                elif 'x' in letters:
-                    print(random.choice(x))
+                elif 'm' in letters:
+                    print(random.choice(m))
                 elif '_' in letters:
-                    print(random.choice(random.choice(vars)))
+                    print(random.choice(random.choice(posList)))
                 elif 'exit' in usrInput:
                     f.close()
                     exit()
                 else:
                     print('INVALID CHARACTER')
 
+# Actions to take if "random" is entered in initial input
 elif usrInput == 'random':
     while True:
         try:
@@ -88,4 +74,18 @@ elif usrInput == 'random':
                 continue
         else:
             for number in range(usrInput):
-                print(random.choice(random.choice(vars)))
+                print(random.choice(random.choice(posList)))
+
+# Actions to take if "thes" is entered in intial input.
+elif usrInput == 'thes':
+    usrInput1 = input('Please enter a part of speech code: ')
+    if 'exit' in usrInput1:
+        f.close()
+        exit()
+    else:
+        while (usrInput1 != ('a' or 'c' or 'i' or 'n' or 'p' or 's' or 'v' or 'x')):
+            if 'exit' in usrInput1:
+                f.close()
+                exit()
+            else:
+                usrInput = input('Sorry, please try again: ')
