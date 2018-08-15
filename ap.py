@@ -16,7 +16,6 @@ d1 = dict(zip(textLabels,posList))
 d2 = dict(zip(varLabels,posList))
 
 for line in f:  # Loop through dictionary file, adding lines to pos lists
-    # if any(x1 in line for x1 in d1.keys()):
     for x1, y1 in d1.items():
         if x1 in line:
             y1.append(line)
@@ -63,14 +62,3 @@ elif i == 'rand':  # Code block for "rand" subprogram
         else:
             for number in range(i):
                 print(random.choice(random.choice(posList)))
-
-elif i == 'thes':  # Code block for "thes" subprogram
-    i1 = input('Please enter a part of speech code: ')
-    if 'exit' in i1:
-        exiting()
-    else:
-        while (i1 != any(varLabels)):
-            if 'exit' in i1:
-                exiting()
-            else:
-                i = input('Sorry, please try again: ')
