@@ -10,7 +10,7 @@
 * observably orchestrate blindfolded sands - `avvn`
 * unholy mash nanny - `avn`
 * agrarian coalescing breastbone - `avn`
-* whomever fosters sedimented futilities - `pavn'
+* whomever fosters sedimented futilities - `pavn`
 * this nutty pony stunning - `pavn`
 * everyone seductive coerces mischief - `pavn`
 * few lachrymal shlepss replenish subtitled rigs - `panvan`
