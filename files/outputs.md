@@ -23,3 +23,5 @@
 * cape stumble - `nn`
 * telecaster impasse - `nn`
 * me gotta upscale - `psv`
+* misplay despite your wolfish roaring - `vcpan`
+* glamorize how thy inspiration prints - `vcpan`

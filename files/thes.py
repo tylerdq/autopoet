@@ -6,7 +6,7 @@ def exiting():
     exit()
 
 
-f = open('2of12id(rev).txt', 'rt')  # Open dictionary text file for reading
+f = open('files/2of12id(rev).txt', 'rt')  # Open dictionary text file for reading
 
 a,c,i,n,p,s,v = [],[],[],[],[],[],[]  # Empty lists for parts of speech
 posList = [a,c,i,n,p,s,v]  # Meta-list of all part-of-speech lists
@@ -24,14 +24,16 @@ for line in f:  # Loop through dictionary file, adding lines to pos lists
 i1 = input('Please enter a part of speech code: ')
 if 'exit' in i1:
     exiting()
-elif i1 != any(varLabels):
+while str(i1) not in varLabels:
     i1 = input('Sorry, please try again: ')
 else:
     i2 = input('Please enter a starting letter: ')
     if 'exit' in i2:
         exiting()
-    elif i2.isalpha():
-        for x3, y3 in d3.values():
-            print(random.choice(y3))
-    else:
+    while not i2.isalpha():
         i2 = input('Sorry, please try again: ')
+    else:
+        for x3, y3 in d3.values():
+            if i1 = x3:
+                if random.choice(x3)
+            print(random.choice(x3))
