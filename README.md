@@ -8,7 +8,7 @@ Install [Python 3](https://www.python.org/downloads/). Download or clone the rep
 
 ### Subprograms
 * "help" will print help text.
-* "form" is the main subprogram, and requires an input format (see below) in `<option1>` to produce a poem with that format. A positive integer can be entered in `<option2>` can be used to specify how many stanzas of this format to generate.
+* "form" is the main subprogram, and requires an input format (see below) in `<option1>` to produce a poem with that format. A positive integer can be entered in `<option2>` to specify how many stanzas of this format to generate.
 * "rand" produces fully random poems (both part of speech categories and their words are randomized), and requires a positive integer in `<option1>` to specify how many words are produced. A positive integer can also be entered in `<option2>` to specify how many stanzas to generate.
 * "thes" is an extra program that requires an single format code (see below) in `<option1>` as well as any set of starting letters from a-z in `<option2>`. It will produce a word from the desired part of speech with starting letters equal to `<option2>`. A positive integer can be entered in `<option3>` to specify how many matching words to generate.
 
