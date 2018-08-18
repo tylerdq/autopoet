@@ -36,18 +36,24 @@ elif len(sys.argv) >= 3:
 
     if sys.argv[1] == 'form':  # Code block for "form" subprogram
         print()
-        for letters in sys.argv[2]:
-            if any(z in letters for z in d2.keys()):
-                for x2, y2 in d2.items():
-                    if x2 in letters:
-                        print(random.choice(y2))
-            elif 'x' in letters:
-                print(random.choice(random.choice(posList)))
-            else:
-                print('INVALID CHARACTER')
-        print()
+        if len(sys.argv) == 4:
+            sax = int(sys.argv[3])
+        else:
+            sax = 1
+        for r in range(0,sax):
+            for letters in sys.argv[2]:
+                if any(z in letters for z in d2.keys()):
+                    for x2, y2 in d2.items():
+                        if x2 in letters:
+                            print(random.choice(y2))
+                elif 'x' in letters:
+                    print(random.choice(random.choice(posList)))
+                else:
+                    print('INVALID CHARACTER')
+            print()
 
     elif sys.argv[1] == 'rand':  # Code block for "rand" subprogram
+
         while True:
             try:
                 sys.argv[2] = int(sys.argv[2])
@@ -57,23 +63,34 @@ elif len(sys.argv) >= 3:
                 exit()
             else:
                 print()
-                for number in range(sys.argv[2]):
-                    print(random.choice(random.choice(posList)))
-                print()
+                if len(sys.argv) == 4:
+                    sax = int(sys.argv[3])
+                else:
+                    sax = 1
+                for r in range(0,sax):
+                    for number in range(sys.argv[2]):
+                        print(random.choice(random.choice(posList)))
+                    print()
                 f.close()
                 exit()
 
     elif sys.argv[1] == 'thes':  # Code block for "thes" subprogram
-        if len(sys.argv) == 4:
+        print()
+        if len(sys.argv) >= 4:
+            if len(sys.argv) == 5:
+                sax = int(sys.argv[4])
+            else:
+                sax = 1
             if sys.argv[2] == 'x':
                 for pos in posList:
                     for word in pos:
                         if word.startswith(sys.argv[3]):
                             selectWords.append(word)
                 if len(selectWords) == 0:
-                    print('\nNo results. Use a different combination.\n')
+                    print('No results. Use a different combination.\n')
                 else:
-                    print('\n' + random.choice(selectWords) + '\n')
+                    for r in range(0,sax):
+                        print(random.choice(selectWords) + '\n')
             elif sys.argv[2] in varLabels:
                 if sys.argv[3].isalpha():
                     for x2, y2 in d2.items():
@@ -82,15 +99,16 @@ elif len(sys.argv) >= 3:
                                 if word.startswith(sys.argv[3]):
                                     selectWords.append(word)
                     if len(selectWords) == 0:
-                        print('\nNo results. Use a different combination.\n')
+                        print('No results. Use a different combination.\n')
                     else:
-                        print('\n' + random.choice(selectWords) + '\n')
+                        for r in range(0,sax):
+                            print(random.choice(selectWords) + '\n')
                 else:
                     print(str(sys.argv[3]) + ' is not alpha. Run "python ap.py help".')
             else:
-                print(str(sys.argv[2]) + ' is not a valid POS code. Run "python ap.py help".')
+                print(str(sys.argv[2]) + ' is not a valid POS code. Run "python ap.py help".\n')
         else:
-            print('Incomplete input. Run "python ap.py help".')
+            print('Incomplete input. Run "python ap.py help".\n')
 
     else:
         print('Incorrect input. Run "python ap.py help".')
