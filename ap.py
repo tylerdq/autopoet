@@ -25,7 +25,7 @@ elif len(sys.argv) >= 3:
     textLabels = ['A:', 'C:', 'I:', 'N:', 'P:', 'S:', 'V:']
     varLabels = ['a', 'c', 'i', 'n', 'p', 's', 'v']
     alphas = list(string.ascii_lowercase)  # List of all lc alpha characters
-    selectWords = []
+    selectWords = []  # Empty list for "thes" subprogram
     d1 = dict(zip(textLabels,posList))
     d2 = dict(zip(varLabels,posList))
 
@@ -52,7 +52,7 @@ elif len(sys.argv) >= 3:
             try:
                 sys.argv[2] = int(sys.argv[2])
             except ValueError:
-                print('Please enter the value as an integer.')
+                print('Value must be entered as an integer.')
                 f.close()
                 exit()
             else:
@@ -66,19 +66,14 @@ elif len(sys.argv) >= 3:
     elif sys.argv[1] == 'thes':  # Code block for "thes" subprogram
         if len(sys.argv) == 4:
             if sys.argv[2] == 'x':
-                #sa3 = sys.argv[3].strip('*')
                 for pos in posList:
                     for word in pos:
-                        #if sys.argv[3].endswith('*'):
-                        #if word.startswith(sa3):
                         if word.startswith(sys.argv[3]):
                             selectWords.append(word)
-                        #elif sys.argv[3].startswith('*'):
-                            #if word.endswith(sa3):
-                                #selectWords.append(word)
-                print()
-                print(random.choice(selectWords))
-                print()
+                if len(selectWords) == 0:
+                    print('\nNo results. Use a different combination.\n')
+                else:
+                    print('\n' + random.choice(selectWords) + '\n')
             elif sys.argv[2] in varLabels:
                 if sys.argv[3].isalpha():
                     for x2, y2 in d2.items():
@@ -86,9 +81,10 @@ elif len(sys.argv) >= 3:
                             for word in y2:
                                 if word.startswith(sys.argv[3]):
                                     selectWords.append(word)
-                    print()
-                    print(random.choice(selectWords))
-                    print()
+                    if len(selectWords) == 0:
+                        print('\nNo results. Use a different combination.\n')
+                    else:
+                        print('\n' + random.choice(selectWords) + '\n')
                 else:
                     print(str(sys.argv[3]) + ' is not alpha. Run "python ap.py help".')
             else:
