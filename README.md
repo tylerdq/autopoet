@@ -13,7 +13,7 @@ Install [Python 3](https://www.python.org/downloads/). Download or clone the rep
 * "thes" is an extra program that requires an single format code (see below) in `<option1>` as well as any set of one or more starting letters from a-z in `<option2>`. It will produce a word from the desired part of speech with starting letters equal to `<option2>`. A positive integer can be entered in `<option3>` to specify how many matching words to generate.
 
 ### Input Format
-When the "form" or "thes" subprograms are run, the program needs a code to find words that match the desired parts of speech. The output will print a number of appropriate words speech equal to the length of the code. Possible parts of speech include:
+When the "form" or "thes" subprograms are run, the program needs a code to find words that match the desired parts of speech. The output will print a number of appropriate words matching the code. Possible parts of speech include:
 
 * Adjectives/adverbs - `a`
 * Conjunctions/prepositions - `c`
