@@ -1,5 +1,5 @@
 # autopoet
-autopoet is a little program that  create poems of any length composed of whichever parts of speech the user prefers. It also can act as a "thesaurus" to help identify unanticipated words based on a chosen part of speech and starting letter(s).
+autopoet is a little program that creates poems of any length composed of whichever parts of speech the user prefers. It also can act as a "thesaurus" to help identify unanticipated words based on a chosen part of speech and starting letter(s).
 
 ## Usage
 Install [Python 3](https://www.python.org/downloads/). Download or clone the repository, then open a terminal, `cd` into the directory, and run:
