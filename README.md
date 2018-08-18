@@ -10,7 +10,7 @@ Install [Python 3](https://www.python.org/downloads/). Download or clone the rep
 * "help" will print help text.
 * "form" is the main subprogram, and requires an input format (see below) in `<option1>` to produce a poem with that format. A positive integer can be entered in `<option2>` to specify how many stanzas of this format to generate.
 * "rand" produces fully random poems (both part of speech categories and their words are randomized), and requires a positive integer in `<option1>` to specify how many words are produced. A positive integer can also be entered in `<option2>` to specify how many stanzas to generate.
-* "thes" is an extra program that requires an single format code (see below) in `<option1>` as well as any set of starting letters from a-z in `<option2>`. It will produce a word from the desired part of speech with starting letters equal to `<option2>`. A positive integer can be entered in `<option3>` to specify how many matching words to generate.
+* "thes" is an extra program that requires an single format code (see below) in `<option1>` as well as any set of one or more starting letters from a-z in `<option2>`. It will produce a word from the desired part of speech with starting letters equal to `<option2>`. A positive integer can be entered in `<option3>` to specify how many matching words to generate.
 
 ### Input Format
 When the "form" or "thes" subprograms are run, the program needs a coded format to return words that match the desired parts of speech. The output will print random words speech equal to the number of letters entered. Possible parts of speech include:
@@ -24,7 +24,7 @@ When the "form" or "thes" subprograms are run, the program needs a coded format 
 * Verbs - `v`
 * Any of the above - `x`
 
-A sample input format for the "form" subprogram might be `avnx`, which results in an output such as "adjective verb noun" plus one random part of speech. For the "thes" subprogram it could be any option, which will be further constrained by the starting letter(s) in arg2.
+A sample input format for the "form" subprogram might be `avnx`, which results in an output such as "adjective verb noun" plus one random part of speech. For the "thes" subprogram it could be any option, which will be further constrained by the starting letter(s) in `<option2>`.
 
 *If characters other than the preset values above are entered during the "form" subprogram, the script will return "INVALID CHARACTER" as an error code for the relevant line, but still generate the other lines.*
 
