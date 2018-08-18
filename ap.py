@@ -76,7 +76,10 @@ elif len(sys.argv) >= 3:
                     for x2, y2 in d2.items():
                         if sys.argv[2] == x2:
                             for word in y2:
-                                if word[0] == sys.argv[3]:
+                                if word[0] == '-' or word[0] == '+':
+                                    if word[1] == sys.argv[3]:
+                                        selectWords.append(word)
+                                elif word[0] == sys.argv[3]:
                                     selectWords.append(word)
                     print()
                     print(random.choice(selectWords))
