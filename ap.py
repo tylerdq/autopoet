@@ -63,7 +63,7 @@ elif len(sys.argv) >= 3:
                 f.close()
                 exit()
 
-    if sys.argv[1] == 'thes':  # Code block for "thes" subprogram
+    elif sys.argv[1] == 'thes':  # Code block for "thes" subprogram
         if len(sys.argv) == 4:
             if sys.argv[2] == 'x':
                 for pos in posList:
