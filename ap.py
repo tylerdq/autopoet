@@ -11,7 +11,7 @@ if len(sys.argv) == 1:
 
 elif len(sys.argv) == 2:
     if sys.argv[1] == 'help':
-        print('\n"python ap.py <subprogram> <arg1> <arg2>"\n\n    Subprogram: "form", "rand", or "thes"\n    arg1:\n        - "form": Any arbitrary combination of [a,c,i,n,p,s,v,x]\n        - "rand": Any positive integer\n        - "thes": Any one of [a,c,i,n,p,s,v]\n    arg2:\n        - "thes": Any lowercase letter from a-z\n')
+        print('\n"python ap.py <subprogram> <arg1> <arg2>"\n\n    Subprogram: "form", "rand", or "thes"\n    arg1:\n        - "form": Any arbitrary combination of [a,c,i,n,p,s,v,x]\n        - "rand": Any positive integer\n        - "thes": Any one of [a,c,i,n,p,s,v]\n    arg2:\n        - "thes": Start of word (lowercase letters from a-z)\n')
         f.close()
         exit()
     else:
@@ -66,28 +66,33 @@ elif len(sys.argv) >= 3:
     elif sys.argv[1] == 'thes':  # Code block for "thes" subprogram
         if len(sys.argv) == 4:
             if sys.argv[2] == 'x':
+                #sa3 = sys.argv[3].strip('*')
                 for pos in posList:
                     for word in pos:
-                        if word[0] == sys.argv[3]:
+                        #if sys.argv[3].endswith('*'):
+                        #if word.startswith(sa3):
+                        if word.startswith(sys.argv[3]):
                             selectWords.append(word)
+                        #elif sys.argv[3].startswith('*'):
+                            #if word.endswith(sa3):
+                                #selectWords.append(word)
+                print()
                 print(random.choice(selectWords))
+                print()
             elif sys.argv[2] in varLabels:
-                if sys.argv[3] in alphas:
+                if sys.argv[3].isalpha():
                     for x2, y2 in d2.items():
                         if sys.argv[2] == x2:
                             for word in y2:
-                                if word[0] == '-' or word[0] == '+':
-                                    if word[1] == sys.argv[3]:
-                                        selectWords.append(word)
-                                elif word[0] == sys.argv[3]:
+                                if word.startswith(sys.argv[3]):
                                     selectWords.append(word)
                     print()
                     print(random.choice(selectWords))
                     print()
                 else:
-                    print(str(sys.argv[3]) + ' not alpha. Run "python ap.py help".')
+                    print(str(sys.argv[3]) + ' is not alpha. Run "python ap.py help".')
             else:
-                print(str(sys.argv[2]) + ' not in list. Run "python ap.py help".')
+                print(str(sys.argv[2]) + ' is not a valid POS code. Run "python ap.py help".')
         else:
             print('Incomplete input. Run "python ap.py help".')
 
