@@ -2,7 +2,7 @@ import sys  # Enable passing command line arguments to script
 import random  # Enable random functions from python library
 import string  # Enable listing of ASCII characters
 
-f = open('files/words.txt', 'rt')  # Open dictionary text file for reading
+f = open('words.txt', 'rt')  # Open dictionary text file for reading
 
 if len(sys.argv) == 1:
     print('Incomplete input. Run "python ap.py help".')
