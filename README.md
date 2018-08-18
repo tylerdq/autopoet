@@ -1,13 +1,13 @@
 # autopoet
-autopoet is a little program that draws on the alternative dictionary [2of12id](http://wordlist.aspell.net/alt12dicts-infl-readme/) from 12dicts to create poems of any length composed of whichever parts of speech the user prefers. It also can act as a "thesaurus" that can help identify new words based on the user's choice of part of speech and starting letter.
+autopoet is a little program that draws on the alternative dictionary [2of12id](http://wordlist.aspell.net/alt12dicts-infl-readme/) from 12dicts to create poems of any length composed of whichever parts of speech the user prefers. It also can act as a "thesaurus" to help identify unanticipated single words based on a chosen part of speech and starting letter.
 
 ## Usage
 Install [Python 3](https://www.python.org/downloads/). Download or clone the repository, then open a terminal, `cd` into the directory, and run:
 
-`python3 ap.py <subprogram> <arg1> <arg2>` according to the following:
+`python ap.py <subprogram> <arg1> <arg2>` according to the following:
 
-* Subprograms include "form", "rand", and "thes"
-* If "form" subprogram was chosen, arg1 takes an input format (see next section) of arbitrary length and parts of speech and returns a randomized poem to match. If "rand" was chosen, arg1 takes any positive integer and returns a poem of matching length with parts of speech categories randomized as well. If "thes" was chosen, arg1 takes a single-character input format (see next section) and returns a part of speech from that category.
+* Subprograms include "form", "rand", "thes", and "help"
+* If the "form" subprogram was chosen, arg1 takes an input format (see next section) of arbitrary length and parts of speech and returns a randomized poem to match. If "rand" was chosen, arg1 takes any positive integer and returns a poem of matching length with parts of speech categories randomized as well. If "thes" was chosen, arg1 takes a single-character input format (see next section) and returns a part of speech from that category. Arg1 does not apply when "help" is chosen.
 * Arg2 is only required/available for the "thes" subprogram, and specifies the starting letter of the returned part of speech.
 
 ## Input Format
@@ -29,7 +29,7 @@ A sample input format for the "form" subprogram might be `avnx`, which results i
 ## Output Format
 The script returns one or more verbatim lines from the 2of12id dictionary, most of which contain multiple versions of each word (suffixes, including tenses and pluralization). The choice to return full lines instead of parsing through the lines was made to encourage the user to take additional creative steps post-script by choosing which versions of words work best for the usage at hand.
 
-*Example outputs from the "form" and "rand" subprograms can be viewed in [outputs.md](outputs.md)*
+*Example (interpreted/refined) outputs from the "form" and "rand" subprograms can be viewed in [outputs.md](outputs.md)*
 
 ## Notes on Dictionary File
 The 2of12id dictionary was first edited using the following processes to make it simpler to parse in python:
