@@ -1,16 +1,18 @@
 # autopoet
-autopoet is a little program that draws on the alternative dictionary [2of12id](http://wordlist.aspell.net/alt12dicts-infl-readme/) from 12dicts to create poems of any length composed of whichever parts of speech the user prefers. It also can act as a "thesaurus" to help identify unanticipated single words based on a chosen part of speech and starting letter.
+autopoet is a little program that  create poems of any length composed of whichever parts of speech the user prefers. It also can act as a "thesaurus" to help identify unanticipated single words based on a chosen part of speech and starting letter.
 
 ## Usage
 Install [Python 3](https://www.python.org/downloads/). Download or clone the repository, then open a terminal, `cd` into the directory, and run:
 
-`python ap.py <subprogram> <arg1> <arg2>` according to the following:
+`python ap.py <subprogram> <option1> <option2> <option3>`
 
-* Subprograms include "form", "rand", "thes", and "help"
-* If the "form" subprogram was chosen, arg1 takes an input format (see next section) of arbitrary length and parts of speech and returns a randomized poem to match. If "rand" was chosen, arg1 takes any positive integer and returns a poem of matching length with parts of speech categories randomized as well. If "thes" was chosen, arg1 takes a single-character input format (see next section) and returns a part of speech from that category. Arg1 does not apply when "help" is chosen.
-* Arg2 is only required/available for the "thes" subprogram, and specifies the starting letter(s) of the returned part of speech.
+### Subprograms
+* "help" will print help text.
+* "form" is the main subprogram, and requires an input format (see below) in `<option1>` to produce a poem with that format. A positive integer can be entered in `<option2>` can be used to specify how many stanzas of this format to generate.
+* "rand" produces fully random poems (both part of speech categories and their words are randomized), and requires a positive integer in `<option1>` to specify how many words are produced. A positive integer can also be entered in `<option2>` to specify how many stanzas to generate.
+* "thes" is an extra program that requires an single format code (see below) in `<option1>` as well as any set of starting letters from a-z in `<option2>`. It will produce a word from the desired part of speech with starting letters equal to `<option2>`. A positive integer can be entered in `<option3>` to specify how many matching words to generate.
 
-## Input Format
+### Input Format
 When the "form" or "thes" subprograms are run, the program needs a coded format to return words that match the desired parts of speech. The output will print random words speech equal to the number of letters entered. Possible parts of speech include:
 
 * Adjectives/adverbs - `a`
@@ -32,7 +34,7 @@ The script returns one or more verbatim lines from the 2of12id dictionary, most 
 *Example (interpreted/refined) outputs from the "form" and "rand" subprograms can be viewed in [outputs.md](outputs.md)*
 
 ## Notes on Dictionary File
-The 2of12id dictionary was first edited using the following processes to make it simpler to parse in python:
+The dictionary used is [2of12id](http://wordlist.aspell.net/alt12dicts-infl-readme/) from 12dicts. The [dictionary file](words.txt) has been edited using the following processes to make it simpler to parse:
 
 1. find: `([A-Z])\s([^:]*):` replace: `$2 $1:` (isolate POS codes to make subprograms work)
 2. find: `^\+` replace: `` (remove `+` from line beginnings to make "thes" work)

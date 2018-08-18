@@ -11,7 +11,7 @@ if len(sys.argv) == 1:
 
 elif len(sys.argv) == 2:
     if sys.argv[1] == 'help':
-        print('\n"python ap.py <subprogram> <arg1> <arg2>"\n\n    Subprogram: "form", "rand", or "thes"\n    arg1:\n        - "form": Any arbitrary combination of [a,c,i,n,p,s,v,x]\n        - "rand": Any positive integer\n        - "thes": Any one of [a,c,i,n,p,s,v]\n    arg2:\n        - "thes": Start of word (lowercase letters from a-z)\n')
+        print('\n"python ap.py <subprogram> <option1> <option2> <option3>"\n\n    Subprogram: "help", form", "rand", or "thes"\n    option1:\n        - "form": Any arbitrary combination of [a,c,i,n,p,s,v,x]\n        - "rand": Any positive integer\n        - "thes": Any one of [a,c,i,n,p,s,v]\n    option2:\n        - "form": Any positive integer (number of stanzas)\n        - "rand": Any positive integer (number of stanzas)\n        - "thes": Start of word (lowercase letters from a-z)\n    option3:\n        - "thes": Any positive integer (number of words)\n')
         f.close()
         exit()
     else:
