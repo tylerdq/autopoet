@@ -5,6 +5,7 @@ autopoet is a little program that draws on the alternative dictionary [2of12id](
 Install [Python 3](https://www.python.org/downloads/). Download or clone the repository, then open a terminal, `cd` into the directory, and run:
 
 `python3 ap.py <subprogram> <arg1> <arg2>` according to the following:
+	
 	* Subprograms include "form", "rand", and "thes"
 	* If "form" subprogram was chosen, arg1 takes an input format (see next section) of arbitrary length and parts of speech and returns a randomized poem to match. If "rand" was chosen, arg1 takes any positive integer and returns a poem of matching length with parts of speech categories randomized as well. If "thes" was chosen, arg1 takes a single-character input format (see next section) and returns a part of speech from that category.
 	* Arg2 is only required/available for the "thes" subprogram, and specifies the starting letter of the returned part of speech.
