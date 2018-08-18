@@ -19,14 +19,9 @@ elif len(sys.argv) == 3:
     selectWords = []
     d1 = dict(zip(textLabels,posList))
     d2 = dict(zip(varLabels,posList))
-    d3 = dict(zip(varLabels,textLabels))
 
     if sys.argv[1] in varLabels:  # Code block for handling arguments
         if sys.argv[2] in alphas:
-            for line in f:  # Loop through dictionary file, adding lines to pos lists
-                for x1, y1 in d1.items():
-                    if x1 in line:
-                        y1.append(line)
             for x2, y2 in d2.items():
                 if sys.argv[1] == x2:
                     for word in y2:
