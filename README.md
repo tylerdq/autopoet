@@ -24,7 +24,7 @@ When the `form` or `thes` subprograms are run, the program needs a code to find 
 * Verbs - `v`
 * Any of the above - `x`
 
-A sample input format for the `form` subprogram might be `avnx`, which outputs "adjective verb noun" plus one random part of speech. For the `thes` subprogram the format is any single above character.
+A sample input format for the `form` subprogram might be `avnx`, which outputs "adjective verb noun" plus one random part of speech. For the `thes` subprogram the format is any single character above.
 
 *If characters other than the preset values above are entered during the `form` subprogram, the script will return "INVALID CHARACTER" as an error code for the relevant line, but still generate the other lines.*
 
