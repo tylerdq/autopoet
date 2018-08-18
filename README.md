@@ -24,12 +24,12 @@ When the "form" or "thes" subprograms are run, the program needs a coded format 
 * Verbs - `v`
 * Any of the above - `x`
 
-A sample input format for the "form" subprogram might be `avnx`, which results in an output such as "adjective verb noun" plus one random part of speech. For the "thes" subprogram it could be any option, which will be further constrained by the starting letter(s) in `<option2>`.
+A sample input format for the "form" subprogram might be `avnx`, which outputs "adjective verb noun" plus one random part of speech. For the "thes" subprogram the format is any single above character.
 
 *If characters other than the preset values above are entered during the "form" subprogram, the script will return "INVALID CHARACTER" as an error code for the relevant line, but still generate the other lines.*
 
 ## Output Format
-The script returns one or more verbatim lines from the 2of12id dictionary, most of which contain multiple versions of each word (suffixes, including tenses and pluralization). The choice to return full lines instead of parsing through the lines was made to encourage the user to take additional creative steps post-script by choosing which versions of words work best for the usage at hand.
+The script returns one or lines from the [dictionary file](words.txt), most of which contain multiple versions of each word (suffixes, including tenses and pluralization). The choice to return full lines instead of parsing through the lines was made to encourage the user to select versions of words that might be most appropriate.
 
 *Example (interpreted/refined) outputs from the "form" and "rand" subprograms can be viewed in [outputs.md](outputs.md)*
 
