@@ -1,5 +1,5 @@
 # autopoet
-autopoet is a little program that creates poems of any length composed of whichever parts of speech the user prefers. It also can act as a "thesaurus" to help identify unanticipated words based on a chosen part of speech and starting letter(s).
+autopoet is a little program that creates poems of any length composed of whichever parts of speech the user prefers. It can also act as a "thesaurus" to help identify unanticipated words based on a chosen part of speech and starting letter(s).
 
 ## Usage
 Install [Python 3](https://www.python.org/downloads/). Then [download](https://github.com/tylerdq/autopoet/archive/master.zip) or clone this repository and from the command line (Terminal, PowerShell, cmd, etc.) [`cd`](https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/command-line-101) into the downloaded/cloned directory and run:
@@ -29,7 +29,7 @@ A sample input format for the `form` subprogram might be `avnx`, which outputs "
 *If characters other than the preset values above are entered during the `form` subprogram, the script will return "INVALID CHARACTER" as an error code for the relevant line, but still generate the other lines.*
 
 ## Output Format
-The script returns one or lines from the [dictionary file](words.txt), most of which contain multiple versions of each word (suffixes, including tenses and pluralization). The choice to return full lines instead of parsing through the lines was made to encourage the user to select versions of words that might be most appropriate.
+The script returns one or more lines from the [dictionary file](words.txt), most of which contain multiple versions of each word (suffixes, including tenses and pluralization). The choice to return full lines instead of parsing through the lines was made to encourage the user to select versions of words that might be most appropriate.
 
 *Example (interpreted/refined) outputs from the `form` and `rand` subprograms can be viewed in [outputs.md](outputs.md)*
 
