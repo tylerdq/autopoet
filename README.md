@@ -1,5 +1,5 @@
 # sympoiesis
-sympoiesis is a little program that creates poems of any length composed of whichever parts of speech the user prefers. It can also act as a "thesaurus" to help identify unanticipated words based on a chosen part of speech and starting letter(s).
+sympoiesis is a little program that works with the user to generate poems of any length composed of specific or random parts of speech. It can also act as a "thesaurus" to help identify unanticipated words based on a specific or random part of speech and one or more starting letters.
 
 ## Usage
 Install [Python 3](https://www.python.org/downloads/). Then [download](https://github.com/tylerdq/sympoiesis/archive/master.zip) or clone this repository and from the command line (Terminal, PowerShell, cmd, etc.) [`cd`](https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/command-line-101) into the downloaded/cloned directory and run:
