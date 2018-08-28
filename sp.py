@@ -5,17 +5,17 @@ import string  # Enable listing of ASCII characters
 f = open('words.txt', 'rt')  # Open dictionary text file for reading
 
 if len(sys.argv) == 1:
-    print('Incomplete input. Run "python ap.py help".')
+    print('Incomplete input. Run "python sp.py help".')
     f.close()
     exit()
 
 elif len(sys.argv) == 2:
     if sys.argv[1] == 'help':
-        print('\n"python ap.py <subprogram> <option1> <option2> <option3>"\n\n    Subprogram: "help", form", "rand", or "thes"\n    option1:\n        - "form": Any arbitrary combination of [a,c,i,n,p,s,v,x]\n        - "rand": Any positive integer\n        - "thes": Any one of [a,c,i,n,p,s,v]\n    option2:\n        - "form": Any positive integer (number of stanzas)\n        - "rand": Any positive integer (number of stanzas)\n        - "thes": Start of word (lowercase letters from a-z)\n    option3:\n        - "thes": Any positive integer (number of words)\n')
+        print('\n"python sp.py <subprogram> <option1> <option2> <option3>"\n\n    Subprogram: "help", form", "rand", or "thes"\n    option1:\n        - "form": Any arbitrary combination of [a,c,i,n,p,s,v,x]\n        - "rand": Any positive integer\n        - "thes": Any one of [a,c,i,n,p,s,v]\n    option2:\n        - "form": Any positive integer (number of stanzas)\n        - "rand": Any positive integer (number of stanzas)\n        - "thes": Start of word (lowercase letters from a-z)\n    option3:\n        - "thes": Any positive integer (number of words)\n')
         f.close()
         exit()
     else:
-        print('Incomplete input. Run "python ap.py help".')
+        print('Incomplete input. Run "python sp.py help".')
         f.close()
         exit()
 
@@ -104,17 +104,17 @@ elif len(sys.argv) >= 3:
                         for r in range(0,sax):
                             print(random.choice(selectWords) + '\n')
                 else:
-                    print(str(sys.argv[3]) + ' is not alpha. Run "python ap.py help".')
+                    print(str(sys.argv[3]) + ' is not alpha. Run "python sp.py help".')
             else:
-                print(str(sys.argv[2]) + ' is not a valid POS code. Run "python ap.py help".\n')
+                print(str(sys.argv[2]) + ' is not a valid POS code. Run "python sp.py help".\n')
         else:
-            print('Incomplete input. Run "python ap.py help".\n')
+            print('Incomplete input. Run "python sp.py help".\n')
 
     else:
-        print('Incorrect input. Run "python ap.py help".')
+        print('Incorrect input. Run "python sp.py help".')
 
 else:
-    print('Incorrect input. Run "python ap.py help".')
+    print('Incorrect input. Run "python sp.py help".')
 
 f.close()
 exit()

@@ -1,10 +1,10 @@
-# autopoet
-autopoet is a little program that creates poems of any length composed of whichever parts of speech the user prefers. It can also act as a "thesaurus" to help identify unanticipated words based on a chosen part of speech and starting letter(s).
+# sympoiesis
+sympoiesis is a little program that creates poems of any length composed of whichever parts of speech the user prefers. It can also act as a "thesaurus" to help identify unanticipated words based on a chosen part of speech and starting letter(s).
 
 ## Usage
-Install [Python 3](https://www.python.org/downloads/). Then [download](https://github.com/tylerdq/autopoet/archive/master.zip) or clone this repository and from the command line (Terminal, PowerShell, cmd, etc.) [`cd`](https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/command-line-101) into the downloaded/cloned directory and run:
+Install [Python 3](https://www.python.org/downloads/). Then [download](https://github.com/tylerdq/sympoiesis/archive/master.zip) or clone this repository and from the command line (Terminal, PowerShell, cmd, etc.) [`cd`](https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/command-line-101) into the downloaded/cloned directory and run:
 
-`python ap.py <subprogram> <option1> <option2> <option3>`
+`python sp.py <subprogram> <option1> <option2> <option3>`
 
 ### Subprograms
 * `help` will print help text.
