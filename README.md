@@ -39,3 +39,6 @@ The dictionary used is [2of12id](http://wordlist.aspell.net/alt12dicts-infl-read
 1. find: `([A-Z])\s([^:]*):` replace: `$2 $1:` (isolate POS codes to make subprograms work)
 2. find: `^\+` replace: `` (remove `+` from line beginnings to make `thes` work)
 3. find: `^-` replace: `` (remove `-` from line beginnings to make `thes` work)
+
+## Notes on Name
+This script used to be called *autopoet*. Inspiration for the name change to *sympoiesis* ("making with") courtesy of Donna Haraway and Abby Roche.
