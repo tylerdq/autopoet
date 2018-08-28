@@ -33,12 +33,14 @@ The script returns one or more lines from the [dictionary file](words.txt), most
 
 *Example (interpreted/refined) outputs from the `form` and `rand` subprograms can be viewed in [outputs.md](outputs.md)*
 
-## Notes on Dictionary File
+## Miscellaneous Notes
+
+### Notes on Dictionary File
 The dictionary used is [2of12id](http://wordlist.aspell.net/alt12dicts-infl-readme/) from 12dicts. The [dictionary file](words.txt) has been edited using the following processes:
 
 1. find: `([A-Z])\s([^:]*):` replace: `$2 $1:` (isolate POS codes to make subprograms work)
 2. find: `^\+` replace: `` (remove `+` from line beginnings to make `thes` work)
 3. find: `^-` replace: `` (remove `-` from line beginnings to make `thes` work)
 
-## Notes on Name
+### Notes on Name
 This script used to be called *autopoet*. Inspiration for the name change to *sympoiesis* ("making with") courtesy of Donna Haraway and Abby Roche.
