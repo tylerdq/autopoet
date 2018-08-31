@@ -4,7 +4,7 @@ sympoiesis is a little program that works with the user to generate poems of any
 ## Usage
 Install [Python 3](https://www.python.org/downloads/). Then [download](https://github.com/tylerdq/sympoiesis/archive/master.zip) or clone this repository and from the command line (Terminal, PowerShell, cmd, etc.) [`cd`](https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/command-line-101) into the downloaded/cloned directory and run:
 
-`python sp.py <subprogram> <option1> <option2> <option3>`
+`python sym.py <subprogram> <option1> <option2> <option3>`
 
 ### Subprograms
 * `help` will print help text.
