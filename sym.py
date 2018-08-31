@@ -22,8 +22,8 @@ elif len(sys.argv) >= 3:
     varLabels = ['a', 'c', 'i', 'n', 'p', 's', 'v']
     alphas = list(string.ascii_lowercase)  # List of all lc alpha characters
     selectWords = []  # Empty list for "thes" subprogram
-    d1 = dict(zip(textLabels,posList))
-    d2 = dict(zip(varLabels,posList))
+    d1 = dict(zip(textLabels, posList))
+    d2 = dict(zip(varLabels, posList))
 
     for line in words:  # Loop through dictionary file, adding lines to pos lists
         for x1, y1 in d1.items():
