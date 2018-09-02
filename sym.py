@@ -22,22 +22,23 @@ def cli():
 
 
 @cli.command()
-@click.argument('format')
+@click.argument('pattern')
 @click.option('--stanzas', '-s', default=1,
               help='Number of stanzas to generate.')
 #@click.option('--thes', '-t', is_flag=True,
 #              help='Starting letters for word(s).')
 @click.option('--wait', '-w', is_flag=True,
               help='Wait for input after each line.')
-def poet(format, stanzas, wait):
-    """Print STANZAS of words matching FORMAT code.
-    Can WAIT for input before showing next word.\n
-    FORMAT is a string including any combination of:\n
+def poet(pattern, stanzas, wait):
+    """Utility to cultivate poetic ideas.
+    Generate word(s) arranged in PATTERN.\n
+    PATTERN is a string including any combination of:\n
     adjective/adverb: a; conjunction/preposition: c; interjection: i; noun: n;
-    pronoun: p; spoken contraction: s; verb: v; any previous: x"""
+    pronoun: p; spoken contraction: s; verb: v; any previous: x\n
+    Like this: python sym.py poet avnx -s 2 -w"""
     poem = []
     for stanza in range(0, stanzas):
-        for letters in format:
+        for letters in pattern:
             if any(z in letters for z in d2.keys()):
                 for x2, y2 in d2.items():
                     if x2 in letters:
@@ -69,10 +70,13 @@ def poet(format, stanzas, wait):
 @click.option('--count', '-c', default=1,
               help='Number of words to generate.')
 def thes(partofspeech, letters, count):
-    """Generate COUNT words from PARTOFSPEECH category with starting LETTERS.\n
+    """Utility to identify potential words.
+    Generate word(s) from PARTOFSPEECH category with starting LETTERS.\n
     PARTOFSPEECH must include exactly one of:\n
     adjective/adverb: a; conjunction/preposition: c; interjection: i; noun: n;
-    pronoun: p; spoken contraction: s; verb: v; any previous: x"""
+    pronoun: p; spoken contraction: s; verb: v; any previous: x\n
+    Like this: python sym.py thes n und -c 7"""
+    click.echo()
     if partofspeech == 'x':
         for pos in posList:
             for word in pos:
