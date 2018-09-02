@@ -1,10 +1,11 @@
 # sympoiesis
-sympoiesis is a set of utilities that supports inventive writing by facilitating somewhat-unexpected encounters with language.
+sympoiesis is a set of utilities that supports inventive writing by facilitating contingent encounters with language.
 
 ## Installation
-Install [Python 3](https://www.python.org/downloads/). Then [download](https://github.com/tylerdq/sympoiesis/archive/master.zip) or clone this repository and from the command line (Terminal, PowerShell, cmd, etc.) [`cd`](https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/command-line-101) into the downloaded/cloned directory.
-
-Run: `pip3 install click`
+1. Install [Python 3](https://www.python.org/downloads/).
+2. [Download](https://github.com/tylerdq/sympoiesis/archive/master.zip) or clone this repository
+3. From the command line (Terminal, PowerShell, cmd, etc.) [`cd`](https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/command-line-101) into the downloaded/cloned directory.
+4. `pip3 install click`
 
 ## Usage
 `python sym.py --help`  
@@ -27,12 +28,11 @@ A sample input format for "poet" might be `avnx`, which will output an adjective
 
 *If characters other than the preset values above are passed to "poet", the script will return "INVALID CHARACTER" as an error code for that word, but still generate the other words.*
 
-## Output Format
+## Miscellaneous Notes
+### Output Format
 The script returns one or more lines from the [dictionary file](words.txt), most of which contain multiple versions of each word (suffixes, including tenses and pluralization). The choice to return full lines instead of parsing through the lines was made to encourage the user to select versions of words that might be most appropriate.
 
 *Example (interpreted/refined) outputs from "poet" can be viewed in [outputs.md](outputs.md)*
-
-## Miscellaneous Notes
 
 ### Notes on Dictionary File
 The dictionary used is [2of12id](http://wordlist.aspell.net/alt12dicts-infl-readme/) from 12dicts and is called "dictionary.txt" in the working directory. If this file is moved or edited the script will break or not work as intended.
