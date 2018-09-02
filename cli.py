@@ -1,6 +1,6 @@
 import click, random, string
 
-with open('words.txt', 'rt') as input_file:
+with open('dictionary.txt', 'rt') as input_file:
     words = input_file.read().splitlines()
 a, c, i, n, p, s, v = [], [], [], [], [], [], []  # Empty POS lists
 posList = [a, c, i, n, p, s, v]  # Meta-list of all part-of-speech lists
@@ -16,16 +16,25 @@ for line in words:  # Loop through dictionary file, adding lines to pos lists
             y1.append(line.strip())
 
 
-@click.command()
+@click.group()
+def cli():
+    pass
+
+
+@cli.command()
 @click.argument('format')
 @click.option('--stanzas', '-s', default=1,
               help='Number of stanzas to generate.')
-@click.option('--thes', '-t', is_flag=True,
-              help='Starting letters for word(s).')
+#@click.option('--thes', '-t', is_flag=True,
+#              help='Starting letters for word(s).')
 @click.option('--wait', '-w', is_flag=True,
-              help='Whether to wait after each line.')
-def form(format, stanzas, wait):
-    """Utility to write poems with your computer."""
+              help='Wait for input after each line.')
+def poet(format, stanzas, wait):
+    """Print STANZAS of words matching FORMAT code.
+    Can WAIT for input before showing next word.\n
+    FORMAT is a string including any combination of:\n
+    adjective/adverb: a; conjunction/preposition: c; interjection: i; noun: n;
+    pronoun: p; spoken contraction: s; verb: v; any previous: x"""
     poem = []
     for stanza in range(0, stanzas):
         for letters in format:
@@ -46,12 +55,48 @@ def form(format, stanzas, wait):
             else:
                 usrInput = input(line + '\n')
             if usrInput == '*':
-                print()
+                click.echo()
                 exit()
     else:
         click.echo()
         for line in poem:
             click.echo(line)
 
+
+@cli.command()
+@click.argument('partofspeech')
+@click.argument('letters')
+@click.option('--count', '-c', default=1,
+              help='Number of words to generate.')
+def thes(partofspeech, letters, count):
+    """Generate COUNT words from PARTOFSPEECH category with starting LETTERS.\n
+    PARTOFSPEECH must include exactly one of:\n
+    adjective/adverb: a; conjunction/preposition: c; interjection: i; noun: n;
+    pronoun: p; spoken contraction: s; verb: v; any previous: x"""
+    if partofspeech == 'x':
+        for pos in posList:
+            for word in pos:
+                if word.startswith(letters):
+                    selectWords.append(word)
+        if len(selectWords) == 0:
+            click.echo('No results. Use a different combination.')
+        else:
+            for r in range(0, count):
+                print(random.choice(selectWords))
+    elif partofspeech in varLabels:
+        if letters.isalpha():
+            for x2, y2 in d2.items():
+                if partofspeech == x2:
+                    for word in y2:
+                        if word.startswith(letters):
+                            selectWords.append(word)
+            if len(selectWords) == 0:
+                click.echo('No results. Use a different combination.')
+            else:
+                for r in range(0, count):
+                    click.echo(random.choice(selectWords))
+    click.echo()
+
+
 if __name__ == '__main__':
-    form()
+    cli()
