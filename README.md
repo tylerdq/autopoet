@@ -26,7 +26,7 @@ The commands require a code specifying the desired part(s) of speech. The script
 
 Input for "poet" might include a string such as `avnx`, which will output an adjective, verb, and noun plus one random part of speech. Input for "thes" must include a single character pertaining to any category above.
 
-*If characters other than the preset values above are passed to "poet", the script will return "INVALID CHARACTER" as an error code for that word, but still generate the other words.*
+*If characters other than the preset values above are passed to "poet", the script will return "INVALID PART OF SPEECH" as an error code for that word, but still generate the other words.*
 
 ## Miscellaneous Notes
 ### Output Format

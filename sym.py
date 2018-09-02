@@ -46,7 +46,7 @@ def poet(pattern, stanzas, wait):
             elif 'x' in letters:
                 poem.append(random.choice(random.choice(posList)))
             else:
-                poem.append('INVALID CHARACTER')
+                poem.append('INVALID PART OF SPEECH')
         poem.append('')
     if wait:
         click.echo()
