@@ -12,8 +12,8 @@ sympoiesis is a set of utilities that supports inventive writing by facilitating
 `python sym.py poet --help`  
 `python sym.py thes --help`
 
-### Input Format
-In case more explanation is needed beyond the in-script help, the commands require a code specifying the desired part(s) of speech. The script will print a number of appropriate words as requested. Part-of-speech codes can include:
+### Parts of Speech
+The commands require a code specifying the desired part(s) of speech. The script will generate a number of appropriate words as requested. Part-of-speech codes can include:
 
 * Adjectives/adverbs - `a`
 * Conjunctions/prepositions - `c`
@@ -24,7 +24,7 @@ In case more explanation is needed beyond the in-script help, the commands requi
 * Verbs - `v`
 * Any of the above - `x`
 
-A sample input format for "poet" might be `avnx`, which will output an adjective, verb, and noun plus one random part of speech. Input for "thes" must include any single character above.
+Input for "poet" might include a string such as `avnx`, which will output an adjective, verb, and noun plus one random part of speech. Input for "thes" must include a single character pertaining to any category above.
 
 *If characters other than the preset values above are passed to "poet", the script will return "INVALID CHARACTER" as an error code for that word, but still generate the other words.*
 
