@@ -1,19 +1,18 @@
 # sympoiesis
-sympoiesis is a set of utilities that supports inventive writing by facilitating somewhat-unexpected encounters with language through human-computer collaboration.
+sympoiesis is a set of utilities that supports inventive writing by facilitating somewhat-unexpected encounters with language.
 
-## Usage
-### Installation
+## Installation
 Install [Python 3](https://www.python.org/downloads/). Then [download](https://github.com/tylerdq/sympoiesis/archive/master.zip) or clone this repository and from the command line (Terminal, PowerShell, cmd, etc.) [`cd`](https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/command-line-101) into the downloaded/cloned directory.
 
 Run: `pip3 install click`
 
-Then try:
-`python sym.py --help`
-`python sym.py poet --help`
+## Usage
+`python sym.py --help`  
+`python sym.py poet --help`  
 `python sym.py thes --help`
 
 ### Input Format
-The commands require a code to find words that match the desired part(s) of speech. The output will print a number of appropriate words as requested. Part-of-speech codes include:
+In case more explanation is needed beyond the in-script help, the commands require a code specifying the desired part(s) of speech. The script will print a number of appropriate words as requested. Part-of-speech codes can include:
 
 * Adjectives/adverbs - `a`
 * Conjunctions/prepositions - `c`
@@ -26,7 +25,7 @@ The commands require a code to find words that match the desired part(s) of spee
 
 A sample input format for "poet" might be `avnx`, which will output an adjective, verb, and noun plus one random part of speech. Input for "thes" must include any single character above.
 
-*If characters other than the preset values above are entered during the `form` subprogram, the script will return "INVALID CHARACTER" as an error code for the relevant line, but still generate the other lines.*
+*If characters other than the preset values above are passed to "poet", the script will return "INVALID CHARACTER" as an error code for that word, but still generate the other words.*
 
 ## Output Format
 The script returns one or more lines from the [dictionary file](words.txt), most of which contain multiple versions of each word (suffixes, including tenses and pluralization). The choice to return full lines instead of parsing through the lines was made to encourage the user to select versions of words that might be most appropriate.
