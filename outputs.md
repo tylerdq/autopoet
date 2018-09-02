@@ -1,4 +1,4 @@
-## Example script outputs (with their formats)
+## Example outputs from "poet" (and input formats)
 * extracurricular converging potholes - `avn`
 * swarding placekickers - `vn`
 * earthen among others - `acp`
