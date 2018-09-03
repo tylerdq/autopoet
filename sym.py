@@ -66,6 +66,8 @@ def poet(pattern, output, stanzas, wait):
             click.echo(item)
             outPoem.append(item)
     if output:
+        if output == 'dictionary.txt':
+            output = input('Please choose a different output filename: ')
         with open(output, 'w') as output_file:
             output_file.write('\n'.join(outPoem))
 
@@ -117,6 +119,8 @@ def find(partofspeech, letters, all, begin, output):
             click.echo(item)
         click.echo()
         if output:
+            if output == 'dictionary.txt':
+                output = input('Please choose a different output filename: ')
             with open(output, 'w') as output_file:
                 output_file.write('\n'.join(finalWords))
     else:
