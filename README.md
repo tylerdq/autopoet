@@ -30,7 +30,7 @@ Input for "poet" might include a string such as `avnx`, which will output an adj
 
 ## Miscellaneous Notes
 ### Output Format
-The program prints to the console and also saves to "output.txt" (unless an alternate filename is given). Output includes one or more lines from the [dictionary file](words.txt), most of which contain multiple versions of each word (suffixes, including tenses and pluralization). The choice to return full lines instead of parsing through the lines was made to encourage the user to select versions of words that might be most appropriate.
+The program prints to the console and also saves to "output.txt" (unless an alternate filename is given). Output includes one or more lines from the [dictionary file](words.txt), most of which contain multiple versions of each word (tenses/pluralization).
 
 *Example (interpreted/refined) outputs from "poet" can be viewed in [outputs.md](outputs.md)*
 
