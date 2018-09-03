@@ -10,7 +10,7 @@ sympoiesis is a set of utilities that supports inventive writing by facilitating
 ## Usage
 `python sym.py --help`  
 `python sym.py poet --help`  
-`python sym.py thes --help`
+`python sym.py find --help`
 
 ### Parts of Speech
 The commands require a code specifying the desired part(s) of speech. The program will generate a number of appropriate words as requested. Part-of-speech codes can include:
@@ -24,7 +24,7 @@ The commands require a code specifying the desired part(s) of speech. The progra
 * Verbs - `v`
 * Any of the above - `x`
 
-Input for "poet" might include a string such as `avnx`, which will output an adjective, verb, and noun plus one random part of speech. Input for "thes" must include a single character pertaining to any category above.
+Input for "poet" might include a string such as `avnx`, which will output an adjective, verb, and noun plus one random part of speech. Input for "find" must include a single character pertaining to any category above.
 
 *If characters other than the preset values above are passed to "poet", the program will return "INVALID PART OF SPEECH" as an error code for that word, but still generate the other words.*
 
@@ -37,10 +37,10 @@ The program prints to the console and also saves to "output.txt" (unless an alte
 ### Notes on Dictionary File
 The dictionary used is [2of12id](http://wordlist.aspell.net/alt12dicts-infl-readme/) from 12dicts which appears in the working directory as "dictionary.txt". If this file is moved, renamed, or edited the program will probably break or not work as intended.
 
-The [dictionary file](dictionary.txt) has been pre-processed in the following ways:  
+The [dictionary file](dictionary.txt) has been pre-processed by taking the following steps in a text editor:  
 1. find: `([A-Z])\s([^:]*):` replace: `$2 $1:` (isolate POS codes to make subprograms work)
-2. find: `^\+` replace: `` (remove `+` from line beginnings to make `thes` work)
-3. find: `^-` replace: `` (remove `-` from line beginnings to make `thes` work)
+2. find: `^\+` replace: `` (remove `+` from line beginnings to make `find` work)
+3. find: `^-` replace: `` (remove `-` from line beginnings to make `find` work)
 
 ### Notes on Name
 This program used to be called *autopoet*. Inspiration for the name change to *sympoiesis* ("making with") courtesy of [Donna Haraway](https://slowrotation.memoryoftheworld.org/Donna%20J.%20Haraway/Staying%20With%20the%20Trouble_%20Making%20K%20(31237)/Staying%20With%20the%20Trouble_%20Makin%20-%20Donna%20J.%20Haraway.pdf#page=22) and Abby Roche.
