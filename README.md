@@ -43,4 +43,4 @@ The [dictionary file](dictionary.txt) has been pre-processed in the following wa
 3. find: `^-` replace: `` (remove `-` from line beginnings to make `thes` work)
 
 ### Notes on Name
-This program used to be called *autopoet*. Inspiration for the name change to *sympoiesis* ("making with") courtesy of Donna Haraway and Abby Roche.
+This program used to be called *autopoet*. Inspiration for the name change to *sympoiesis* ("making with") courtesy of [Donna Haraway](https://slowrotation.memoryoftheworld.org/Donna%20J.%20Haraway/Staying%20With%20the%20Trouble_%20Making%20K%20(31237)/Staying%20With%20the%20Trouble_%20Makin%20-%20Donna%20J.%20Haraway.pdf#page=22) and Abby Roche.
