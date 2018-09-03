@@ -10,7 +10,7 @@ alphas = list(string.ascii_lowercase)  # List of all lc alpha characters
 selectWords = []  # Empty list for "thes" subprogram
 d1 = dict(zip(textLabels, posList))
 d2 = dict(zip(varLabels, posList))
-for line in words:  # Loop through dictionary file, adding lines to pos lists
+for line in words:  # Add lines in dictionary file to pos lists
     for x1, y1 in d1.items():
         if x1 in line:
             y1.append(line.strip())
@@ -23,45 +23,52 @@ def cli():
 
 @cli.command()
 @click.argument('pattern')
+@click.option('--output', '-o', default='output.txt',
+              help='Specify output file name.')
 @click.option('--stanzas', '-s', default=1,
               help='Number of stanzas to generate.')
-#@click.option('--thes', '-t', is_flag=True,
-#              help='Starting letters for word(s).')
 @click.option('--wait', '-w', is_flag=True,
               help='Wait for input after each line.')
-def poet(pattern, stanzas, wait):
+def poet(output, pattern, stanzas, wait):
     """Utility to cultivate poetic ideas.
     Generate word(s) arranged in PATTERN.\n
     PATTERN is a string including any combination of:\n
     adjective/adverb: a; conjunction/preposition: c; interjection: i; noun: n;
     pronoun: p; spoken contraction: s; verb: v; any previous: x\n
-    Like this: python sym.py poet avnx -s 2 -w"""
-    poem = []
+    Like this: python sym.py poet avnx -s 2 -w -o mypoem.txt"""
+    inPoem, outPoem = [], []
     for stanza in range(0, stanzas):
         for letters in pattern:
             if any(z in letters for z in d2.keys()):
                 for x2, y2 in d2.items():
                     if x2 in letters:
-                        poem.append(random.choice(y2))
+                        inPoem.append(random.choice(y2))
             elif 'x' in letters:
-                poem.append(random.choice(random.choice(posList)))
+                inPoem.append(random.choice(random.choice(posList)))
             else:
-                poem.append('INVALID PART OF SPEECH')
-        poem.append('')
+                inPoem.append('INVALID PART OF SPEECH')
+        inPoem.append('')
     if wait:
         click.echo()
-        for line in poem:
-            if line == '':
-                print(line)
+        for item in inPoem:
+            if item == '':
+                click.echo(item)
+                outPoem.append(item)
             else:
-                usrInput = input(line + '\n')
+                usrInput = input(item + '\n')
+                outPoem.append(item)
+                outPoem.append(usrInput)
             if usrInput == '*':
                 click.echo()
                 exit()
     else:
         click.echo()
-        for line in poem:
-            click.echo(line)
+        for item in inPoem:
+            click.echo(item)
+            outPoem.append(item)
+    if output:
+        with open(output, 'w') as output_file:
+            output_file.write('\n'.join(outPoem))
 
 
 @cli.command()
@@ -86,7 +93,7 @@ def thes(partofspeech, letters, count):
             click.echo('No results. Use a different combination.')
         else:
             for r in range(0, count):
-                print(random.choice(selectWords))
+                click.echo(random.choice(selectWords))
     elif partofspeech in varLabels:
         if letters.isalpha():
             for x2, y2 in d2.items():
