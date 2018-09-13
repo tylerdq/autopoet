@@ -2,10 +2,10 @@ import click, random, string
 
 with open('dictionary.txt', 'rt') as input_file:
     words = input_file.read().splitlines()
-a, c, i, n, p, s, v = [], [], [], [], [], [], []
-posList = [a, c, i, n, p, s, v]  # Meta-list of all part-of-speech lists
-textLabels = ['A:', 'C:', 'I:', 'N:', 'P:', 'S:', 'V:']
-varLabels = ['a', 'c', 'i', 'n', 'p', 's', 'v']
+a, c, n, p, v = [], [], [], [], []
+posList = [a, c, n, p, v]  # Meta-list of all part-of-speech lists
+textLabels = ['A:', 'C:', 'N:', 'P:', 'V:']
+varLabels = ['a', 'c', 'n', 'p', 'v']
 alphas = list(string.ascii_lowercase)  # List of all lc alpha characters
 d1 = dict(zip(textLabels, posList))
 d2 = dict(zip(varLabels, posList))

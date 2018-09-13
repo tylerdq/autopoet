@@ -17,10 +17,8 @@ The commands require a code specifying the desired part(s) of speech. The progra
 
 * Adjectives/adverbs - `a`
 * Conjunctions/prepositions - `c`
-* Interjections - `i`
 * Nouns - `n`
 * Pronouns - `p`
-* Spoken contractions - `s`
 * Verbs - `v`
 * Any of the above - `x`
 
