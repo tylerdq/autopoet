@@ -1,4 +1,4 @@
-import click, random, string
+import click, random, string, sys
 
 with open('dictionary.txt', 'rt') as input_file:
     words = input_file.read().splitlines()
@@ -59,7 +59,7 @@ def poet(pattern, output, stanzas, wait):
                 outPoem.append(usrInput)
             if usrInput == '*':
                 click.echo()
-                exit()
+                sys.exit()
     else:
         click.echo()
         for item in inPoem:
