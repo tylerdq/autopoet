@@ -1,4 +1,7 @@
 # sympoiesis
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tylerdq/sympoiesis/jupyter?filepath=sym.ipynb)
+
 sympoiesis is a set of utilities that supports inventive writing by facilitating contingent encounters with language.
 
 ## Installation
