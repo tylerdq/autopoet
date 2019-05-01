@@ -79,9 +79,11 @@ def poet(pattern, output, stanzas, wait):
               help='Return all possible words.')
 @click.option('--begin', '-b', is_flag=True,
               help='Specify if word(s) must begin with LETTERS')
+@click.option('--end', '-e', is_flag=True,
+              help='Specify if word(s) must end with LETTERS')
 @click.option('--output', '-o', default='output.txt',
               help='Specify output file name (only for --all).')
-def find(partofspeech, letters, all, begin, output):
+def find(partofspeech, letters, all, begin, end, output):
     """Utility to identify potential words.
     Generate word(s) from PARTOFSPEECH category with starting LETTERS.\n
     PARTOFSPEECH must include exactly one of:\n
@@ -96,6 +98,10 @@ def find(partofspeech, letters, all, begin, output):
                 if begin:
                     if word.startswith(letters):
                         selectWords.append(word)
+                elif end:
+                    token = word.split()
+                    if token[0].endswith(letters):
+                        selectWords.append(word)
                 else:
                     if letters in word:
                         selectWords.append(word)
@@ -106,6 +112,10 @@ def find(partofspeech, letters, all, begin, output):
                     for word in y2:
                         if begin:
                             if word.startswith(letters):
+                                selectWords.append(word)
+                        elif end:
+                            token = word.split()
+                            if token[0].endswith(letters):
                                 selectWords.append(word)
                         else:
                             if letters in word:
